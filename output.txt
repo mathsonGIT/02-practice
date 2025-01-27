@@ -1,0 +1,56 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.2  0.3 167068 12712 ?        Ss   13:22   0:07 /lib/systemd/systemd --system --deserialize 25
+root           2  0.0  0.0   2460  1352 ?        Sl   13:22   0:00 /init
+root           7  0.0  0.0   2476   196 ?        Sl   13:22   0:00 plan9 --control-socket 6 --log-level 4 --server-fd 7 --pipe-fd 9 --log-truncate
+root          77  0.0  0.0 152992  2212 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/bare_5.snap /snap/bare/5 -o ro,nodev,allow_other,suid
+root          79  0.0  0.0 153124  2212 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/gtk-common-themes_1535.snap /snap/gtk-common-themes/1535 -o ro,nodev,allow_other,suid
+root          80  0.0  0.3 377284 15676 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/core22_1621.snap /snap/core22/1621 -o ro,nodev,allow_other,suid
+root          85  0.0  0.0 152992   216 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/core22_1612.snap /snap/core22/1612 -o ro,nodev,allow_other,suid
+root          91  0.0  0.0 152992   188 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/snapd_21184.snap /snap/snapd/21184 -o ro,nodev,allow_other,suid
+root          99  0.0  0.2 302520  9136 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/snapd_21759.snap /snap/snapd/21759 -o ro,nodev,allow_other,suid
+root         105  0.0  0.0 152992  2228 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/ubuntu-desktop-installer_1284.snap /snap/ubuntu-desktop-installer/1284 -o ro,nodev,allow_other,suid
+root         108  0.0  0.3 377284 13300 ?        Ssl  13:22   0:00 snapfuse /var/lib/snapd/snaps/ubuntu-desktop-installer_1286.snap /snap/ubuntu-desktop-installer/1286 -o ro,nodev,allow_other,suid
+root         152  0.0  0.0   4308  2660 ?        Ss   13:22   0:00 /usr/sbin/cron -f -P
+message+     155  0.0  0.1   8892  4920 ?        Ss   13:22   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         162  0.0  0.4  30108 19152 ?        Ss   13:22   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         167  0.0  0.1  15332  7460 ?        Ss   13:22   0:00 /lib/systemd/systemd-logind
+root         227  0.0  0.0   4784  3336 ?        Ss   13:22   0:00 /bin/bash /snap/ubuntu-desktop-installer/1286/bin/subiquity-server
+root         229  0.0  0.5 107228 21196 ?        Ssl  13:22   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         238  0.0  0.0   3240  1112 hvc0     Ss+  13:22   0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud console 115200,38400,9600 vt220
+root         243  0.0  0.0   3196  1044 tty1     Ss+  13:22   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         285  0.1  2.2 1172676 90352 ?       Sl   13:22   0:04 /snap/ubuntu-desktop-installer/1286/usr/bin/python3.10 -m subiquity.cmd.server --use-os-prober --storage-version=2 --postinst-hooks-dir=/snap/ubuntu-desktop-installer/1286/etc/subiquity/postinst.d
+root         324  0.0  0.1   7520  4784 pts/1    Ss   13:22   0:00 /bin/login -f
+mathson      350  0.0  0.2  16908  8860 ?        Ss   13:22   0:00 /lib/systemd/systemd --user
+mathson      351  0.0  0.0 168768  3388 ?        S    13:22   0:00 (sd-pam)
+mathson      356  0.0  0.1   6124  4876 pts/1    S+   13:22   0:00 -bash
+root         396  0.0  0.0   2464   124 ?        Ss   13:22   0:00 /init
+root         398  0.0  0.0   2480   128 ?        S    13:22   0:00 /init
+mathson      402  0.0  0.0   2892   948 pts/0    Ss+  13:22   0:00 sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=1915950658-1731325816-928220970-2214365421 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+mathson      403  0.0  0.0   2892   956 pts/0    S+   13:22   0:00 sh /mnt/c/Users/mathson25/.vscode/extensions/ms-vscode-remote.remote-wsl-0.88.5/scripts/wslServer.sh cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=1915950658-1731325816-928220970-2214365421 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+mathson      494  0.0  0.0   2892  1000 pts/0    S+   13:22   0:00 sh /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/bin/code-server --host=127.0.0.1 --port=0 --connection-token=1915950658-1731325816-928220970-2214365421 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+mathson      498  0.8  2.8 11818688 110900 pts/0 Rl+  13:22   0:23 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=1915950658-1731325816-928220970-2214365421 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+mathson      624  0.2  1.8 11681556 72144 pts/0  Sl+  13:22   0:07 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/bootstrap-fork --type=ptyHost --logsPath /home/mathson/.vscode-server/data/logs/20250127T133504
+root        1188  0.0  0.0   2476   124 ?        Ss   13:23   0:00 /init
+root        1189  0.0  0.0   2476   132 ?        S    13:23   0:00 /init
+mathson     1194  0.0  1.4 999916 56652 pts/7    Ssl+ 13:23   0:01 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 45723 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+mathson     1205  0.0  1.4 11726448 55036 pts/0  Rl+  13:23   0:00 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/bootstrap-fork --type=fileWatcher
+root        1217  0.0  0.0   2476   124 ?        Ss   13:23   0:00 /init
+root        1218  0.0  0.0   2476   132 ?        S    13:23   0:00 /init
+mathson     1219  0.0  1.3 991460 51244 pts/8    Ssl+ 13:23   0:02 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 45723 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+mathson     1230  1.6  5.1 32855852 203924 pts/0 Sl+  13:23   0:43 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node --dns-result-order=ipv4first /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+mathson     1453  0.0  0.1   6244  5092 pts/2    Ss+  13:23   0:00 /bin/bash --init-file /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+mathson     1495  0.5  6.3 1788520 250256 pts/0  Sl+  13:23   0:14 /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node /home/mathson/.vscode-server/extensions/ms-python.vscode-pylance-2024.12.1/dist/server.bundle.js --cancellationReceive=file:940755fe29bc76d37f2b79ed6fd72aca1601daef9f --node-ipc --clientProcessId=1230
+mathson     1521  0.0  0.1   6376  5520 pts/3    Ss   13:23   0:00 /bin/bash --init-file /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+root        4600  0.0  0.2 234504  8700 ?        Ssl  13:29   0:00 /usr/libexec/polkitd --no-debug
+root       13799  0.0  0.1  21832  5700 ?        Ss   13:30   0:00 /lib/systemd/systemd-udevd
+systemd+   14175  0.0  0.3  25664 12748 ?        Ss   13:30   0:00 /lib/systemd/systemd-resolved
+root       14178  0.0  0.3  64116 14636 ?        S<s  13:30   0:00 /lib/systemd/systemd-journald
+systemd+   14252  0.0  0.1  89364  6636 ?        Ssl  13:30   0:00 /lib/systemd/systemd-timesyncd
+root       14269  0.0  0.5 293008 20356 ?        Ssl  13:30   0:00 /usr/libexec/packagekitd
+root       14616  0.0  1.1 1986388 43368 ?       Ssl  13:30   0:00 /usr/lib/snapd/snapd
+syslog     16027  0.0  0.1 222404  4916 ?        Ssl  13:30   0:00 /usr/sbin/rsyslogd -n -iNONE
+mathson    20197  0.0  0.7  35984 29784 pts/3    S+   13:48   0:00 python3 practice2.py
+uuidd      20205  0.0  0.0   6640  1488 ?        Ss   13:48   0:00 /usr/sbin/uuidd --socket-activation
+mathson    20962  0.2  0.8 183452 32348 pts/3    Sl+  13:51   0:02 /home/mathson/python_advanced/flask_env/bin/python3 practice2.py
+mathson    24099  0.0  0.1   6244  5284 pts/4    Ss   14:07   0:00 /bin/bash --init-file /home/mathson/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+mathson    24358  0.0  0.0   7752  3484 pts/4    R+   14:07   0:00 ps -aux
