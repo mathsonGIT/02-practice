@@ -22,19 +22,26 @@ DF_INIT.set_index('data', inplace=True)
 @app.route('/add/<date>/<int:number>') # сохранение информации о совершённой в рублях трате за какой-то день;
 def add_record(date, number):
     global DF_INIT
-    DF_INIT.loc[-1] = [[date, number]]
-    return(html_wrapper(f'Данные добавлены успешно. Всего записей {DF_INIT.shape}'))
+    DF_INIT.loc[pd.to_datetime(date)] = number
+    return(html_wrapper(f'Данные добавлены успешно. Всего записей {DF_INIT.shape[0] - 1}'))
 
 
 @app.route('/calculate/<int:year>') # получение суммарных трат за указанный год;
 def year_cost(year):
-    #df = convert_list_to_df(COST_LIST)
-    html = html_wrapper(f'Суммарные затраты за {year} год равны {DF_INIT.loc[f'{year}'].sum().tolist()[0]}')
+    global DF_INIT
+    try:
+        html = html_wrapper(f'Суммарные затраты за {year} год равны {DF_INIT.loc[f'{year}'].sum().tolist()[0]}')
+    except:
+        html = html_wrapper(f'Данные за {year} год отсутствуют')
     return(html)
 
 @app.route('/calculate/<int:year>/<int:month>') # получение суммарных трат за указанные год и месяц
 def month_cost(year, month):
-    html = html_wrapper(f'Суммарные затраты за {year} год и {month} месяц равны {DF_INIT.loc[f'{year}-{month}'].sum().tolist()[0]}')
+    global DF_INIT
+    try:
+        html = html_wrapper(f'Суммарные затраты за {year} год и {month} месяц равны {DF_INIT.loc[f'{year}-{month}'].sum().tolist()[0]}')
+    except:
+        html = html_wrapper(f'Данные за {year} год и {month} отсутствуют')
     return(html)
 
 
