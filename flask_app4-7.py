@@ -60,13 +60,13 @@ def file_processing(size: int, relative_path: str) -> str:
 
 #Accouting Finance Application endpoints
 import pandas as pd
-COST_LIST = []
-def convert_list_to_df(records):
-    df = pd.DataFrame(records, columns = ['data', 'cost'])
-    df['data'] = pd.to_datetime(df['data'])
-    df.set_index('data', inplace=True)
-    return(df)
-
+#COST_LIST = []
+#def convert_list_to_df(records):
+#    df = pd.DataFrame(records, columns = ['data', 'cost'])
+#    df['data'] = pd.to_datetime(df['data'])
+#    df.set_index('data', inplace=True)
+#    return(df)
+#COST_DF = pd.DataFrame(, columns = ['data', 'cost'])
 
 @app.route('/add/<date>/<int:number>') # сохранение информации о совершённой в рублях трате за какой-то день;
 def add_record(date, number):
